@@ -1,0 +1,189 @@
+/* Basic Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  color: #e0e0e0;
+  background-color: #121212;
+  overflow-x: hidden;
+  animation: fadeIn 1s ease-in-out; /* Body fade-in animation */
+}
+
+/* Fade-in Animation */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+/* Slide-in Animation */
+@keyframes slideIn {
+  from { transform: translateY(-30px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+/* Navbar Styling */
+header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: rgba(18, 18, 18, 0.95);
+  color: #fff;
+  padding: 1em 0;
+  z-index: 1000;
+}
+
+header nav {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+header h1 {
+  font-size: 1.7em;
+  color: #ff8c00; /* Orange accent color for site name */
+}
+
+header ul {
+  list-style: none;
+  display: flex;
+}
+
+header ul li {
+  margin: 0 1em;
+}
+
+header ul li a {
+  color: #e0e0e0;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 0.5em;
+  transition: color 0.3s ease;
+}
+
+header ul li a:hover {
+  color: #ff8c00;
+  opacity: 0.8;
+  transform: scale(1.05); /* Slight scale effect on hover */
+}
+
+/* Hero Section Styling */
+section#home {
+  height: 100vh;
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('school-dark.jpg') no-repeat center center/cover;
+  color: #e0e0e0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  animation: slideIn 1s ease-out; /* Slide-in effect on load */
+}
+
+.hero h2 {
+  font-size: 2.8em;
+  margin-bottom: 0.5em;
+  color: #ff8c00; /* Orange accent color for main heading */
+}
+
+.hero hr {
+  width: 0;
+  height: 3px;
+  background: #ff8c00; /* Orange accent for underline */
+  border: none;
+  margin: 0.5em auto;
+  transition: width 0.6s ease; /* Smooth expand animation */
+}
+
+.hero hr {
+  width: 60px; /* Final width after animation */
+}
+
+.hero:hover hr {
+  width: 100px; /* Expand underline on hover */
+}
+
+.hero p {
+  font-size: 1.2em;
+  margin-bottom: 1em;
+  color: #b0b0b0;
+  animation: fadeIn 1.2s ease-in-out;
+}
+
+/* Button Styling */
+.cta-button {
+  display: inline-block;
+  padding: 0.7em 2em;
+  font-size: 1.2em;
+  color: #121212;
+  background-color: #ff8c00; /* Orange color for button */
+  text-decoration: none;
+  border-radius: 30px;
+  transition: background 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.cta-button:hover {
+  background-color: #e67e00; /* Darker orange on hover */
+  color: #fff;
+  transform: scale(1.1); /* Slight scale-up effect */
+  box-shadow: 0 4px 15px rgba(255, 140, 0, 0.4); /* Glow effect */
+}
+
+/* About and Contact Section Styling */
+section {
+  padding: 4em 2em;
+  text-align: center;
+  animation: fadeInSection 1s ease-in-out; /* One-time fade-in animation */
+}
+
+@keyframes fadeInSection {
+  0% { opacity: 0; transform: translateY(20px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+section h2 {
+  font-size: 2.2em;
+  margin-bottom: 0.5em;
+  color: #ff8c00; /* Orange color for section headings */
+  animation: slideIn 1s ease-out; /* Slide-in effect for section title */
+}
+
+section p {
+  font-size: 1.1em;
+  color: #b0b0b0;
+  animation: fadeIn 1s ease-in 0.5s forwards;
+}
+
+/* Footer Styling */
+footer {
+  background: #333;
+  color: #fff;
+  text-align: center;
+  padding: 1em 0;
+  font-size: 0.9em;
+  animation: fadeIn 1s ease-in-out 0.8s forwards; /* Fade-in effect for footer */
+}
+
+footer p {
+  margin: 0.5em 0;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  header nav {
+    flex-direction: column;
+  }
+
+  header ul {
+    flex-direction: column;
+  }
+
+  .hero h2 {
+    font-size: 2.2em;
+  }
+}
